@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_utils/flutter_utils.dart';
+import 'package:real_estate_agent/views/screens/dashboard/dashboard.dart';
 import 'views/screens/splash/splash_screen.dart';
 
 void main() {
@@ -15,7 +16,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'ubuntu'),
-      home: SplashScreen(),
+      home: DashboardScreen(),
+      // const SplashScreen(),
       // const UploadPropertyScreen(),
       builder: (context, child) {
         ScreenUtil.init(context);
