@@ -1,0 +1,6 @@
+package com.example.real_estate_agent
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity: FlutterActivity() {
+}
