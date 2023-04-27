@@ -16,8 +16,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'ubuntu'),
-      home: DashboardScreen(),
-      // const SplashScreen(),
+      home:
+          //  DashboardScreen(),
+          const SplashScreen(),
       // const UploadPropertyScreen(),
       builder: (context, child) {
         ScreenUtil.init(context);
