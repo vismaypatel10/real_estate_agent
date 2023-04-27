@@ -19,7 +19,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: '>=2.19.4 <3.0.0'
+  sdk: '>=2.18.4 <3.0.0'
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -38,7 +38,10 @@ dependencies:
   flutter_utils:
     git:
       url: https://github.com/vvvirani/flutter_utils
-  flutter_svg: ^2.0.4
+  flutter_widgets:
+    git:
+      url: https://github.com/vvvirani/flutter_widgets
+  flutter_svg: ^1.1.6
   otp_text_field: ^1.1.3
   pin_code_fields: ^7.4.0
   smooth_page_indicator: ^1.0.1
