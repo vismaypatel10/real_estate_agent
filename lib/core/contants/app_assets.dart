@@ -47,8 +47,11 @@ class AppAssets {
   static const String apartmentIcon = 'assets/images/icons/apartmentIcon.svg';
   static const String villaIcon = 'assets/images/icons/villaIcon.svg';
   static const String townhouseIcon = 'assets/images/icons/townhouseIcon.svg';
+  static const String sellIcon = 'assets/images/icons/sellIcon.svg';
+  static const String buyIcon = 'assets/images/icons/buyIcon.svg';
   static const String hotelApartmentIcon =
       'assets/images/icons/hotelApartmentIcon.svg';
+
   static const String penthouseIcon = 'assets/images/icons/penthouseIcon.svg';
   static const String duplexIcon = 'assets/images/icons/duplexIcon.svg';
   static const String uploadImageIcon =
