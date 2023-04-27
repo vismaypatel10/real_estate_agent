@@ -103,6 +103,10 @@ flutter:
       fonts:
         - asset: assets\fonts\Ubuntu\Ubuntu-Regular.ttf
         - asset: assets\fonts\Ubuntu\Ubuntu-Bold.ttf
+    - family: Jost
+      fonts:
+        - asset: assets\fonts\Jost\Jost-Regular.ttf
+        - asset: assets\fonts\Jost\Jost-Bold.ttf
           
   #   - family: Trajan Pro
   #     fonts:
