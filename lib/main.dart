@@ -15,10 +15,9 @@ class MyApp extends StatelessWidget {
     // BottomBarViewModel _barViewModel = Get.put(BottomBarViewModel());
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(fontFamily: 'ubuntu'),
-      home:
-          //  DashboardScreen(),
-          const SplashScreen(),
+      theme: ThemeData(fontFamily: 'Jost'),
+      home: DashboardScreen(),
+      // const SplashScreen(),
       // const UploadPropertyScreen(),
       builder: (context, child) {
         ScreenUtil.init(context);

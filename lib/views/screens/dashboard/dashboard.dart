@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+
 import 'package:flutter_utils/flutter_utils.dart';
 import 'package:real_estate_agent/core/contants/app_assets.dart';
 import 'package:real_estate_agent/core/contants/sizes.dart';
@@ -17,92 +17,125 @@ class _DashboardScreenState extends State<DashboardScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      body: Column(
+        body: SingleChildScrollView(
+      child: Column(
         children: [
-          Stack(
-            children: [
-              Image.asset(
-                height: MediaQuery.of(context).size.height,
-                AppAssets.onBoardingBg1,
-                fit: BoxFit.cover,
-              ),
-              Positioned(
-                  top: Sizes.s200.h,
-                  child: SizedBox(
-                    width: MediaQuery.of(context).size.width,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          'Total Properties: ',
-                          style: TextStyle(
-                              fontSize: Sizes.s15.sp,
-                              fontWeight: FontWeight.w600),
-                        ),
-                      ],
-                    ),
-                  )),
-              Positioned(
-                top: Sizes.s250.h,
-                left: Sizes.s25.w,
-                right: Sizes.s25.w,
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.vertical,
-                  child: Column(
+          ScreenUtil().setVerticalSpacing(150),
+          Text(
+            'Total Properties : 40',
+            style:
+                TextStyle(fontSize: Sizes.s20.sp, fontWeight: FontWeight.bold),
+          ),
+          ScreenUtil().setVerticalSpacing(40),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Column(
+              children: [
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16),
+                  height: Sizes.s80.h,
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: ThemeColors.white),
+                  child: Row(
                     children: [
-                      Container(
-                        height: Sizes.s100.h,
-                        width: MediaQuery.of(context).size.width,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: ThemeColors.grey,
-                        ),
+                      SvgPicture.asset(
+                        'assets/images/icons/commercialIcon.svg',
+                        height: 25,
+                        width: 25,
+                        fit: BoxFit.cover,
                       ),
-                      ScreenUtil().setVerticalSpacing(20),
-                      Container(
-                        height: Sizes.s100.h,
-                        width: MediaQuery.of(context).size.width,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: ThemeColors.grey,
-                        ),
-                      ),
-                      ScreenUtil().setVerticalSpacing(20),
-                      Container(
-                        height: Sizes.s100.h,
-                        width: MediaQuery.of(context).size.width,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: ThemeColors.grey,
-                        ),
-                      ),
-                      ScreenUtil().setVerticalSpacing(20),
-                      Container(
-                        height: Sizes.s100.h,
-                        width: MediaQuery.of(context).size.width,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: ThemeColors.grey,
-                        ),
-                      ),
-                      ScreenUtil().setVerticalSpacing(20),
-                      Container(
-                        height: Sizes.s100.h,
-                        width: MediaQuery.of(context).size.width,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: ThemeColors.grey,
-                        ),
-                      ),
+                      ScreenUtil().setHorizontalSpacing(10),
+                      Text(
+                        'Commercial Properties',
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.w600),
+                      )
                     ],
                   ),
                 ),
-              )
-            ],
+                ScreenUtil().setVerticalSpacing(20),
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16),
+                  height: Sizes.s80.h,
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: ThemeColors.white),
+                  child: Row(
+                    children: [
+                      SvgPicture.asset(
+                        'assets/images/icons/residentialIcon.svg',
+                        height: 25,
+                        width: 25,
+                        fit: BoxFit.cover,
+                      ),
+                      ScreenUtil().setHorizontalSpacing(10),
+                      Text(
+                        'Residencial Properties',
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.w600),
+                      )
+                    ],
+                  ),
+                ),
+                ScreenUtil().setVerticalSpacing(20),
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16),
+                  height: Sizes.s80.h,
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: ThemeColors.white),
+                  child: Row(
+                    children: [
+                      SvgPicture.asset(
+                        'assets/images/icons/IndustrialIcon.svg',
+                        height: 25,
+                        width: 25,
+                        fit: BoxFit.cover,
+                      ),
+                      ScreenUtil().setHorizontalSpacing(10),
+                      Text(
+                        'Industrial Properties',
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.w600),
+                      )
+                    ],
+                  ),
+                ),
+                ScreenUtil().setVerticalSpacing(20),
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16),
+                  height: Sizes.s80.h,
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: ThemeColors.white),
+                  child: Row(
+                    children: [
+                      SvgPicture.asset(
+                        'assets/images/icons/landIcon.svg',
+                        height: 25,
+                        width: 25,
+                        fit: BoxFit.cover,
+                      ),
+                      ScreenUtil().setHorizontalSpacing(10),
+                      Text(
+                        'Land Properties',
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.w600),
+                      )
+                    ],
+                  ),
+                ),
+                ScreenUtil().setVerticalSpacing(20),
+              ],
+            ),
           )
         ],
       ),
-    );
+    ));
   }
 }
