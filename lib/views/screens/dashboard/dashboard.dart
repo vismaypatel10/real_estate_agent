@@ -24,7 +24,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
           AppBar(backgroundColor: ThemeColors.searchBg, elevation: 0, actions: [
         IconButton(
           onPressed: () {},
-          icon: Icon(Icons.logout),
+          icon: Icon(Icons.logout), 
           color: ThemeColors.black,
           iconSize: 25,
         )
