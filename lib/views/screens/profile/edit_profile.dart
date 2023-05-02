@@ -212,14 +212,3 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
     );
   }
 }
-
-// class ApartmentFilter {
-//   final Icon icon;
-//   final String title;
-
-//   ApartmentFilter({required this.icon, required this.title});
-// }
-
-// List<ApartmentFilter> listApartment = [
-//   ApartmentFilter(icon: icon, title: title)
-// ];

@@ -21,17 +21,18 @@ class _UploadPropertyScreenState extends State<UploadPropertyScreen> {
       length: 3,
       child: Scaffold(
         appBar: AppBar(
-          leading: Padding(
-            padding: const EdgeInsets.all(17.0),
-            child: Container(
-              height: 18,
-              width: 20,
-              child: SvgPicture.asset(
-                AppAssets.backArrow,
-                color: ThemeColors.black,
-              ),
-            ),
-          ),
+          automaticallyImplyLeading: false,
+          // leading: Padding(
+          //   padding: const EdgeInsets.all(17.0),
+          //   child: Container(
+          //     height: 18,
+          //     width: 20,
+          //     child: SvgPicture.asset(
+          //       AppAssets.backArrow,
+          //       color: ThemeColors.black,
+          //     ),
+          //   ),
+          // ),
           elevation: 6,
           backgroundColor: ThemeColors.white,
           title: Text(
