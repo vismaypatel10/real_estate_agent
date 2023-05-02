@@ -33,7 +33,14 @@ class _OverviewScreenState extends State<OverviewScreen> {
   String? selectedBedrooms;
   String? selectedBathrooms;
 
-  final List<String> _locations = ['A', 'B', 'C', 'D'];
+  final List<String> _bedroomsList = ['1', '2', '3', '4', '5'];
+  final List<String> _bathroomsList = ['1', '2', '3', '4', '5'];
+  final List<String> _ageOfPropertyList = [
+    '0-1 years',
+    '1-5 years',
+    '5-10 years',
+    '10+ years'
+  ];
   final List<String> _propertyType = [
     'Land',
     'Residential',
@@ -45,30 +52,55 @@ class _OverviewScreenState extends State<OverviewScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ThemeColors.white,
-      bottomNavigationBar: Padding(
-        padding: EdgeInsets.symmetric(
-            horizontal: Sizes.s25.h, vertical: Sizes.s20.w),
-        child: CtmElevatedButton(
-            fontWeight: FontWeight.w700,
-            borderColor: ThemeColors.transparent,
-            fontSize: Sizes.s20.sp,
-            width: MediaQuery.of(context).size.width,
-            btnColor: ThemeColors.themeColor,
-            txtColor: ThemeColors.white,
-            text: 'Continue',
-            onPressed: () {
-              // if (_formkey.currentState!.validate()) {
-              //   Navigator.push(
-              //       context,
-              //       MaterialPageRoute(
-              //           builder: (context) => const OtpScreen()));
-              // }
-            }),
-      ),
+      // bottomNavigationBar:
+      // Padding(
+      //   padding: EdgeInsets.symmetric(
+      //       horizontal: Sizes.s25.h, vertical: Sizes.s20.w),
+      //   child: CtmElevatedButton(
+      //       fontWeight: FontWeight.w700,
+      //       borderColor: ThemeColors.transparent,
+      //       fontSize: Sizes.s20.sp,
+      //       width: MediaQuery.of(context).size.width,
+      //       btnColor: ThemeColors.themeColor,
+      //       txtColor: ThemeColors.white,
+      //       text: 'Continue',
+      //       onPressed: () {
+      //         // if (_formkey.currentState!.validate()) {
+      //         //   Navigator.push(
+      //         //       context,
+      //         //       MaterialPageRoute(
+      //         //           builder: (context) => const OtpScreen()));
+      //         // }
+      //       }),
+      // ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            ScreenUtil().setVerticalSpacing(30),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25),
+              child: TextformFieldWithName(
+                  hintname: 'Enter full name', name: 'Full Name'),
+            ),
+            ScreenUtil().setVerticalSpacing(30),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 25),
+              child: TextformFieldWithName(
+                hintname: 'Enter phone number',
+                name: 'Phone Number',
+                keyboardType: TextInputType.number,
+              ),
+            ),
+            ScreenUtil().setVerticalSpacing(30),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 25),
+              child: TextformFieldWithName(
+                hintname: 'Enter Email',
+                name: 'Email',
+                keyboardType: TextInputType.emailAddress,
+              ),
+            ),
             ScreenUtil().setVerticalSpacing(30),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25),
@@ -108,7 +140,7 @@ class _OverviewScreenState extends State<OverviewScreen> {
                     child: CtmDropDown(
                       hintText: 'Select ',
                       dropDownName: 'Bedrooms',
-                      list: _locations,
+                      list: _bedroomsList,
                       value: selectedBedrooms,
                     ),
                   ),
@@ -117,7 +149,7 @@ class _OverviewScreenState extends State<OverviewScreen> {
                     child: CtmDropDown(
                       hintText: 'Select ',
                       dropDownName: 'Bathrooms',
-                      list: _locations,
+                      list: _bathroomsList,
                       value: selectedBathrooms,
                     ),
                   ),
@@ -129,12 +161,12 @@ class _OverviewScreenState extends State<OverviewScreen> {
               padding: const EdgeInsets.symmetric(horizontal: 25),
               child: Row(
                 children: [
-                  const Expanded(
+                  Expanded(
                     child: TextformFieldWithName(
                         hintname: 'Enter area', name: 'Area'),
                   ),
                   ScreenUtil().setHorizontalSpacing(25),
-                  const Expanded(
+                  Expanded(
                     child: TextformFieldWithName(
                         hintname: 'Enter price', name: 'Price per sq.ft'),
                   ),
@@ -142,31 +174,42 @@ class _OverviewScreenState extends State<OverviewScreen> {
               ),
             ),
             ScreenUtil().setVerticalSpacing(30),
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 25.0),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25.0),
+              child: CtmDropDown(
+                hintText: 'Select ',
+                dropDownName: 'Age of property',
+                list: _ageOfPropertyList,
+                value: selectedBathrooms,
+              ),
+            ),
+            ScreenUtil().setVerticalSpacing(30),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25.0),
               child: TextformFieldWithName(
                   hintname: 'Enter property info...', name: 'About project'),
             ),
             ScreenUtil().setVerticalSpacing(80),
-            // Padding(
-            //   padding: const EdgeInsets.symmetric(horizontal: 25.0),
-            //   child: CtmElevatedButton(
-            //       fontWeight: FontWeight.w700,
-            //       borderColor: ThemeColors.transparent,
-            //       fontSize: Sizes.s20.sp,
-            //       width: MediaQuery.of(context).size.width,
-            //       btnColor: ThemeColors.themeColor,
-            //       txtColor: ThemeColors.white,
-            //       text: 'Continue',
-            //       onPressed: () {
-            //         // if (_formkey.currentState!.validate()) {
-            //         //   Navigator.push(
-            //         //       context,
-            //         //       MaterialPageRoute(
-            //         //           builder: (context) => const OtpScreen()));
-            //         // }
-            //       }),
-            // ),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                  horizontal: Sizes.s25, vertical: Sizes.s20),
+              child: CtmElevatedButton(
+                  fontWeight: FontWeight.w700,
+                  borderColor: ThemeColors.transparent,
+                  fontSize: Sizes.s20.sp,
+                  width: MediaQuery.of(context).size.width,
+                  btnColor: ThemeColors.themeColor,
+                  txtColor: ThemeColors.white,
+                  text: 'Continue',
+                  onPressed: () {
+                    // if (_formkey.currentState!.validate()) {
+                    //   Navigator.push(
+                    //       context,
+                    //       MaterialPageRoute(
+                    //           builder: (context) => const OtpScreen()));
+                    // }
+                  }),
+            ),
           ],
         ),
       ),

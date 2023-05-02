@@ -7,6 +7,7 @@ import 'package:real_estate_agent/core/contants/sizes.dart';
 import 'package:real_estate_agent/core/contants/textbutton.dart';
 import 'package:real_estate_agent/core/utils/colors.dart';
 import 'package:real_estate_agent/views/screens/upload_property/upload_properties.dart';
+import 'package:real_estate_agent/views/widgets/bottom_navigation_bar.dart';
 
 class OtpScreen extends StatefulWidget {
   const OtpScreen({Key? key}) : super(key: key);
@@ -106,7 +107,7 @@ class _OtpScreenState extends State<OtpScreen> {
                     Navigator.pushAndRemoveUntil(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const UploadPropertyScreen(),
+                          builder: (context) => const BotttomNavigationBar(),
                         ),
                         (route) => false);
                   }

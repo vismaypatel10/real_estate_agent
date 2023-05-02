@@ -12,8 +12,9 @@ class TextformFieldWithName extends StatelessWidget {
   final FontWeight? hintFontWeight;
   final Color? hintColor;
   final Color? nameColor;
+  TextInputType? keyboardType;
 
-  const TextformFieldWithName(
+  TextformFieldWithName(
       {required this.name,
       required this.hintname,
       this.hintColor,
@@ -22,6 +23,7 @@ class TextformFieldWithName extends StatelessWidget {
       this.nameColor,
       this.nameFontSize,
       this.nameFontWeight,
+      this.keyboardType,
       super.key});
 
   @override
@@ -38,6 +40,7 @@ class TextformFieldWithName extends StatelessWidget {
           ),
         ),
         CtmTextFormField(
+          keyboardType: keyboardType,
           fontSize: hintFontSize ?? Sizes.s15.sp,
           textColor: hintColor ?? ThemeColors.textColor,
           hintText: hintname,

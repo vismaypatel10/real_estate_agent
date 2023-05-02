@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_utils/flutter_utils.dart';
+import 'package:flutter_widgets/flutter_widgets.dart';
 import 'package:real_estate_agent/core/contants/dropdown.dart';
 import 'package:real_estate_agent/core/contants/textformfield_text.dart';
 import 'package:real_estate_agent/core/contants/elevatedbutton.dart';
@@ -53,10 +54,10 @@ class _LocationScreenState extends State<LocationScreen> {
               // }
             }),
       ),
-      body: Column(
+      body: ScrollableColumn(
         children: [
           ScreenUtil().setVerticalSpacing(20),
-          const Padding(
+          Padding(
             padding: EdgeInsets.symmetric(horizontal: 25.0),
             child: TextformFieldWithName(
                 name: 'Enter property location',
@@ -87,6 +88,27 @@ class _LocationScreenState extends State<LocationScreen> {
               ],
             ),
           ),
+          ScreenUtil().setVerticalSpacing(40),
+          // Padding(
+          //   padding: const EdgeInsets.symmetric(
+          //       horizontal: Sizes.s25, vertical: Sizes.s20),
+          //   child: CtmElevatedButton(
+          //       fontWeight: FontWeight.w700,
+          //       borderColor: ThemeColors.transparent,
+          //       fontSize: Sizes.s20.sp,
+          //       width: MediaQuery.of(context).size.width,
+          //       btnColor: ThemeColors.themeColor,
+          //       txtColor: ThemeColors.white,
+          //       text: 'Continue',
+          //       onPressed: () {
+          //         // if (_formkey.currentState!.validate()) {
+          //         //   Navigator.push(
+          //         //       context,
+          //         //       MaterialPageRoute(
+          //         //           builder: (context) => const OtpScreen()));
+          //         // }
+          //       }),
+          // ),
         ],
       ),
     );
