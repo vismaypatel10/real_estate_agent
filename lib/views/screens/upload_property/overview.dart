@@ -76,13 +76,13 @@ class _OverviewScreenState extends State<OverviewScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             ScreenUtil().setVerticalSpacing(30),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 25),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 25),
               child: TextformFieldWithName(
                   hintname: 'Enter full name', name: 'Full Name'),
             ),
             ScreenUtil().setVerticalSpacing(30),
-            Padding(
+            const Padding(
               padding: EdgeInsets.symmetric(horizontal: 25),
               child: TextformFieldWithName(
                 hintname: 'Enter phone number',
@@ -91,7 +91,7 @@ class _OverviewScreenState extends State<OverviewScreen> {
               ),
             ),
             ScreenUtil().setVerticalSpacing(30),
-            Padding(
+            const Padding(
               padding: EdgeInsets.symmetric(horizontal: 25),
               child: TextformFieldWithName(
                 hintname: 'Enter Email',
@@ -159,12 +159,12 @@ class _OverviewScreenState extends State<OverviewScreen> {
               padding: const EdgeInsets.symmetric(horizontal: 25),
               child: Row(
                 children: [
-                  Expanded(
+                  const Expanded(
                     child: TextformFieldWithName(
                         hintname: 'Enter area', name: 'Area'),
                   ),
                   ScreenUtil().setHorizontalSpacing(25),
-                  Expanded(
+                  const Expanded(
                     child: TextformFieldWithName(
                         hintname: 'Enter price', name: 'Price per sq.ft'),
                   ),
@@ -182,8 +182,8 @@ class _OverviewScreenState extends State<OverviewScreen> {
               ),
             ),
             ScreenUtil().setVerticalSpacing(30),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 25.0),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 25.0),
               child: TextformFieldWithName(
                   hintname: 'Enter property info...', name: 'About project'),
             ),

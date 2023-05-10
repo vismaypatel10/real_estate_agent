@@ -119,7 +119,7 @@ class _PropertyListScreenState extends State<PropertyListScreen> {
                         children: [
                           ListView.separated(
                             shrinkWrap: true,
-                            physics: NeverScrollableScrollPhysics(),
+                            physics: const NeverScrollableScrollPhysics(),
                             separatorBuilder: (context, index) => const Divider(
                                 thickness: 1, indent: 20, endIndent: 20),
                             itemCount: listProperty[index].values.first.length,

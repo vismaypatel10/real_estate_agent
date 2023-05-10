@@ -12,9 +12,9 @@ class TextformFieldWithName extends StatelessWidget {
   final FontWeight? hintFontWeight;
   final Color? hintColor;
   final Color? nameColor;
-  TextInputType? keyboardType;
+  final TextInputType? keyboardType;
 
-  TextformFieldWithName(
+  const TextformFieldWithName(
       {required this.name,
       required this.hintname,
       this.hintColor,

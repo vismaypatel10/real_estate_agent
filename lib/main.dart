@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_utils/flutter_utils.dart';
-import 'package:real_estate_agent/views/screens/dashboard/dashboard.dart';
-import 'package:real_estate_agent/views/screens/splash/splash_screen.dart';
 import 'package:real_estate_agent/views/widgets/bottom_navigation_bar.dart';
 
 void main() {

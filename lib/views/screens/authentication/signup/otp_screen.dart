@@ -6,7 +6,6 @@ import 'package:real_estate_agent/core/contants/elevatedbutton.dart';
 import 'package:real_estate_agent/core/contants/sizes.dart';
 import 'package:real_estate_agent/core/contants/textbutton.dart';
 import 'package:real_estate_agent/core/utils/colors.dart';
-import 'package:real_estate_agent/views/screens/upload_property/upload_properties.dart';
 import 'package:real_estate_agent/views/widgets/bottom_navigation_bar.dart';
 
 class OtpScreen extends StatefulWidget {

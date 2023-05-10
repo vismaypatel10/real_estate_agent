@@ -57,7 +57,7 @@ class _LocationScreenState extends State<LocationScreen> {
       body: ScrollableColumn(
         children: [
           ScreenUtil().setVerticalSpacing(20),
-          Padding(
+          const Padding(
             padding: EdgeInsets.symmetric(horizontal: 25.0),
             child: TextformFieldWithName(
                 name: 'Enter property location',

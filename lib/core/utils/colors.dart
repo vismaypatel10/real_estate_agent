@@ -16,6 +16,6 @@ class ThemeColors {
   static Color searchBar = const Color(0xffF9F9F9);
   static Color bgColor = const Color(0xffF5F5F5);
   static Color grey = Colors.grey;
-  static Color textgrey = Color(0xFFA7A7A7);
-  static Color blackText = Color(0xFF32312F);
+  static Color textgrey = const Color(0xFFA7A7A7);
+  static Color blackText = const Color(0xFF32312F);
 }

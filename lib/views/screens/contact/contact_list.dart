@@ -119,14 +119,15 @@ class _ContactListState extends State<ContactList> {
                         children: [
                           ListView.separated(
                             shrinkWrap: true,
-                            physics: NeverScrollableScrollPhysics(),
+                            physics: const NeverScrollableScrollPhysics(),
                             separatorBuilder: (context, index) => const Divider(
                                 thickness: 1, indent: 20, endIndent: 20),
                             itemCount:
                                 listContactPerson[index].values.first.length,
                             itemBuilder: (context, i) {
                               return Container(
-                                padding: EdgeInsets.only(left: 30, right: 20),
+                                padding:
+                                    const EdgeInsets.only(left: 30, right: 20),
                                 width: MediaQuery.of(context).size.width,
                                 child: Row(
                                     // mainAxisAlignment:

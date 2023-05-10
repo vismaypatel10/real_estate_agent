@@ -1,11 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_utils/flutter_utils.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:real_estate_agent/core/contants/app_assets.dart';
 import 'package:real_estate_agent/core/contants/sizes.dart';
-import 'package:real_estate_agent/core/contants/textbutton.dart';
 import 'package:real_estate_agent/core/utils/colors.dart';
 import 'package:real_estate_agent/views/screens/profile/edit_profile.dart';
 

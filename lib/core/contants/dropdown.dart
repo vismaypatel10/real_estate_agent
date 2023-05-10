@@ -5,8 +5,8 @@ import 'package:real_estate_agent/core/utils/colors.dart';
 class CtmDropDown extends StatefulWidget {
   final List<String>? list;
   String? value;
-  String dropDownName;
-  String hintText;
+  final String dropDownName;
+  final String hintText;
 
   CtmDropDown(
       {required this.dropDownName,
@@ -67,6 +67,5 @@ class _CtmDropDownState extends State<CtmDropDown> {
         ),
       ],
     );
-    ;
   }
 }
