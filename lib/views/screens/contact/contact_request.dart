@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 class ContactRequest extends StatefulWidget {
   const ContactRequest({super.key});
@@ -12,6 +10,8 @@ class ContactRequest extends StatefulWidget {
 class _ContactRequestState extends State<ContactRequest> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(),
+    );
   }
 }

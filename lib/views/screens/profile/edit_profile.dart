@@ -21,6 +21,36 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: ThemeColors.white,
+      appBar: AppBar(
+        backgroundColor: ThemeColors.white,
+        elevation: 0,
+        // leading: GestureDetector(
+        //   onTap: () {
+        //     Navigator.pop(context);
+        //   },
+        //   child: SizedBox(
+        //     height: Sizes.s25.h,
+        //     width: Sizes.s25.w,
+        //     child: Padding(
+        //       padding: const EdgeInsets.all(16.0),
+        //       child: SvgPicture.asset(
+        //         AppAssets.backArrow,
+        //         color: ThemeColors.black,
+        //       ),
+        //     ),
+        //   ),
+        // ),
+        centerTitle: true,
+        title: Text(
+          'Edit Profile',
+          style: TextStyle(
+            fontSize: Sizes.s23.sp,
+            color: ThemeColors.black,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+      ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Center(
@@ -33,35 +63,6 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     ScreenUtil().setVerticalSpacing(20.0),
-                    Row(
-                      children: [
-                        GestureDetector(
-                          onTap: () {
-                            Navigator.pop(context);
-                          },
-                          child: SizedBox(
-                            height: Sizes.s35.h,
-                            width: Sizes.s35.w,
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: SvgPicture.asset(
-                                AppAssets.backArrow,
-                                color: ThemeColors.black,
-                              ),
-                            ),
-                          ),
-                        ),
-                        ScreenUtil().setHorizontalSpacing(20.0),
-                        Text(
-                          'Edit Profile',
-                          style: TextStyle(
-                              color: ThemeColors.black,
-                              fontSize: Sizes.s23.sp,
-                              fontWeight: FontWeight.w600),
-                        ),
-                      ],
-                    ),
-                    ScreenUtil().setVerticalSpacing(30.0),
                     Center(
                       child: Stack(
                         children: [
@@ -99,7 +100,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                         ],
                       ),
                     ),
-                    ScreenUtil().setVerticalSpacing(80.0),
+                    ScreenUtil().setVerticalSpacing(40.0),
                     Text(
                       'FullName',
                       style: TextStyle(
@@ -167,40 +168,20 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                         }
                       },
                     ),
-                    ScreenUtil().setVerticalSpacing(Sizes.s70.h),
-                    Row(
-                      children: [
-                        Flexible(
-                          child: CtmElevatedButton(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w700,
-                              elevation: 0,
-                              borderColor: ThemeColors.themeColor,
-                              txtColor: ThemeColors.themeColor,
-                              text: 'Not Save',
-                              btnColor: ThemeColors.white,
-                              onPressed: () {
-                                Navigator.pop(context);
-                              }),
-                        ),
-                        ScreenUtil().setHorizontalSpacing(17.0),
-                        Flexible(
-                          child: CtmElevatedButton(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w700,
-                              elevation: 0,
-                              borderColor: ThemeColors.transparent,
-                              txtColor: ThemeColors.white,
-                              text: 'Submit',
-                              btnColor: ThemeColors.themeColor,
-                              onPressed: () {
-                                if (_formkey.currentState!.validate()) {
-                                  Navigator.pop(context);
-                                }
-                              }),
-                        )
-                      ],
-                    ),
+                    ScreenUtil().setVerticalSpacing(Sizes.s60.h),
+                    CtmElevatedButton(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w700,
+                        elevation: 0,
+                        borderColor: ThemeColors.transparent,
+                        txtColor: ThemeColors.white,
+                        text: 'Submit',
+                        btnColor: ThemeColors.themeColor,
+                        onPressed: () {
+                          if (_formkey.currentState!.validate()) {
+                            Navigator.pop(context);
+                          }
+                        }),
                     ScreenUtil().setVerticalSpacing(20.0)
                   ],
                 ),

@@ -4,8 +4,11 @@ class OnBoardingModel {
   String? image;
   String? title;
   String? bgimage;
-
-  OnBoardingModel({this.image, this.title, this.bgimage});
+  OnBoardingModel({
+    this.image,
+    this.title,
+    this.bgimage,
+  });
 }
 
 List<OnBoardingModel> contents = [

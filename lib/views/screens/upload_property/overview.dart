@@ -3,11 +3,9 @@ import 'package:flutter_utils/flutter_utils.dart';
 import 'package:real_estate_agent/core/contants/dropdown.dart';
 import 'package:real_estate_agent/core/contants/elevatedbutton.dart';
 import 'package:real_estate_agent/core/contants/sizes.dart';
-import 'package:real_estate_agent/core/contants/textbutton.dart';
 import 'package:real_estate_agent/core/contants/textformfield.dart';
 import 'package:real_estate_agent/core/contants/textformfield_text.dart';
 import 'package:real_estate_agent/core/utils/colors.dart';
-import 'package:real_estate_agent/views/screens/authentication/signin/login_page.dart';
 
 class OverviewScreen extends StatefulWidget {
   const OverviewScreen({super.key});

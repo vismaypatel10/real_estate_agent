@@ -24,12 +24,6 @@ class _PhotoScreenState extends State<PhotoScreen> {
   }
 
   @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ThemeColors.white,
@@ -97,12 +91,12 @@ class _PhotoScreenState extends State<PhotoScreen> {
                 ),
               ),
             ),
-            ScreenUtil().setVerticalSpacing(28),
+            ScreenUtil().setVerticalSpacing(25),
             GridView.builder(
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
               itemCount: imageList.length,
-              padding: const EdgeInsets.symmetric(horizontal: 35),
+              padding: const EdgeInsets.symmetric(horizontal: 35, vertical: 10),
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisSpacing: 20, mainAxisSpacing: 20, crossAxisCount: 3),
               itemBuilder: (context, index) {

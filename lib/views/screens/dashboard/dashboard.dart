@@ -6,6 +6,7 @@ import 'package:flutter_widgets/flutter_widgets.dart';
 import 'package:real_estate_agent/core/contants/app_assets.dart';
 import 'package:real_estate_agent/core/contants/sizes.dart';
 import 'package:real_estate_agent/core/utils/colors.dart';
+import 'package:real_estate_agent/views/screens/property_list.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
@@ -18,28 +19,16 @@ class _DashboardScreenState extends State<DashboardScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ThemeColors.searchBg,
-      // appBar:
-      //     AppBar(backgroundColor: ThemeColors.searchBg, elevation: 0, actions: [
-      //   IconButton(
-      //     onPressed: () {},
-      //     icon: Icon(Icons.logout),
-      //     color: ThemeColors.black,
-      //     iconSize: 30,
-      //   )
-      // ]),
+      backgroundColor: ThemeColors.themeColor,
       body: SafeArea(
         child: Column(
           children: [
-            // ScreenUtil().setVerticalSpacing(Sizes.s80.h),
             Container(
               height: Sizes.s120.h,
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
-                  color: ThemeColors.themeColor,
-                  borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(20),
-                      bottomRight: Radius.circular(20))),
+                color: ThemeColors.themeColor,
+              ),
               child: Center(
                 child: Text(
                   'Total Properties : 40',
@@ -48,50 +37,98 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 ),
               ),
             ),
-
             Expanded(
-              child: ScrollableColumn(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                children: [
-                  ScreenUtil().setVerticalSpacing(20),
-                  CtmPropertyContainer(
-                    assetName: AppAssets.commercialIcon,
-                    text: 'Commercial Properties',
-                    onPressed: () {},
+              child: ClipRRect(
+                borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(20),
+                    topRight: Radius.circular(20)),
+                child: Container(
+                  color: ThemeColors.white,
+                  child: ScrollableColumn(
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    children: [
+                      ScreenUtil().setVerticalSpacing(20),
+                      CtmPropertyContainer(
+                        assetName: AppAssets.commercialIcon,
+                        text: 'Commercial Properties',
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    const PropertyListScreen(),
+                              ));
+                        },
+                      ),
+                      ScreenUtil().setVerticalSpacing(20),
+                      CtmPropertyContainer(
+                        assetName: AppAssets.residentialIcon,
+                        text: 'Residencial Properties',
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    const PropertyListScreen(),
+                              ));
+                        },
+                      ),
+                      ScreenUtil().setVerticalSpacing(20),
+                      CtmPropertyContainer(
+                        assetName: AppAssets.industrialIcon,
+                        text: 'Industrial Properties',
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    const PropertyListScreen(),
+                              ));
+                        },
+                      ),
+                      ScreenUtil().setVerticalSpacing(20),
+                      CtmPropertyContainer(
+                        assetName: AppAssets.landIcon,
+                        text: 'Land Properties',
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    const PropertyListScreen(),
+                              ));
+                        },
+                      ),
+                      ScreenUtil().setVerticalSpacing(20),
+                      CtmPropertyContainer(
+                        assetName: AppAssets.sellIcon,
+                        text: 'Sell Lead',
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    const PropertyListScreen(),
+                              ));
+                        },
+                      ),
+                      ScreenUtil().setVerticalSpacing(20),
+                      CtmPropertyContainer(
+                        assetName: AppAssets.buyIcon,
+                        text: 'Buy Lead',
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    const PropertyListScreen(),
+                              ));
+                        },
+                      ),
+                      ScreenUtil().setVerticalSpacing(20)
+                    ],
                   ),
-                  ScreenUtil().setVerticalSpacing(20),
-                  CtmPropertyContainer(
-                    assetName: AppAssets.residentialIcon,
-                    text: 'Residencial Properties',
-                    onPressed: () {},
-                  ),
-                  ScreenUtil().setVerticalSpacing(20),
-                  CtmPropertyContainer(
-                    // assetName: 'assets/images/icons/IndustrialIcon.svg',
-                    assetName: AppAssets.industrialIcon,
-                    text: 'Industrial Properties',
-                    onPressed: () {},
-                  ),
-                  ScreenUtil().setVerticalSpacing(20),
-                  CtmPropertyContainer(
-                    assetName: AppAssets.landIcon,
-                    text: 'Land Properties',
-                    onPressed: () {},
-                  ),
-                  ScreenUtil().setVerticalSpacing(20),
-                  CtmPropertyContainer(
-                    assetName: AppAssets.sellIcon,
-                    text: 'Sell Lead',
-                    onPressed: () {},
-                  ),
-                  ScreenUtil().setVerticalSpacing(20),
-                  CtmPropertyContainer(
-                    assetName: AppAssets.buyIcon,
-                    text: 'Buy Lead',
-                    onPressed: () {},
-                  ),
-                  ScreenUtil().setVerticalSpacing(20)
-                ],
+                ),
               ),
             ),
           ],
@@ -136,10 +173,9 @@ class CtmPropertyContainer extends StatelessWidget {
               text,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
             ),
           ),
-          // Spacer(),
           IconButton(
               onPressed: onPressed, icon: const Icon(CupertinoIcons.forward))
         ],

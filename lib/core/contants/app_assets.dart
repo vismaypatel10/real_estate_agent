@@ -59,6 +59,12 @@ class AppAssets {
       'assets/images/icons/residentialIcon.svg';
   static const String industrialIcon = 'assets/images/icons/IndustrialIcon.svg';
   static const String landIcon = 'assets/images/icons/landIcon.svg';
+  static const String blistIcon = 'assets/images/icons/listIcon.svg';
+  static const String abhishekprofile = 'assets/images/image/abhishek.png';
+  static const String jasminprofile = 'assets/images/image/jasmin.png';
+  static const String mohanprofile = 'assets/images/image/mohan.png';
+  static const String saraprofile = 'assets/images/image/sara.png';
   static const String uploadImageIcon =
       'assets/images/icons/uploadImageIcon.svg';
+  static const String propertyImageExp = 'assets/images/image/property1.jpg';
 }

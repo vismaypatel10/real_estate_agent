@@ -38,17 +38,19 @@ class _CtmDropDownState extends State<CtmDropDown> {
         DropdownButton(
           isExpanded: true,
           style: TextStyle(
-              color: ThemeColors.textColor,
-              fontSize: Sizes.s14.sp,
-              fontWeight: FontWeight.w500,
-              fontFamily: 'Karla'),
+            color: ThemeColors.textColor,
+            fontSize: Sizes.s14.sp,
+            fontWeight: FontWeight.w500,
+            // fontFamily: 'Karla',
+          ),
           hint: Text(
             widget.hintText,
             style: TextStyle(
-                color: ThemeColors.textColor,
-                fontSize: Sizes.s15.sp,
-                fontWeight: FontWeight.w500,
-                fontFamily: 'Karla'),
+              color: ThemeColors.textColor,
+              fontSize: Sizes.s15.sp,
+              fontWeight: FontWeight.w400,
+              fontFamily: 'Jost',
+            ),
           ),
           value: widget.value,
           onChanged: (newValue) {
