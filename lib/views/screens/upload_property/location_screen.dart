@@ -46,6 +46,7 @@ class _LocationScreenState extends State<LocationScreen> {
             txtColor: ThemeColors.white,
             text: 'Continue',
             onPressed: () {
+              // Navigator.pop(context);
               // if (_formkey.currentState!.validate()) {
               //   Navigator.push(
               //       context,
@@ -60,8 +61,15 @@ class _LocationScreenState extends State<LocationScreen> {
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 25.0),
             child: TextformFieldWithName(
-                name: 'Enter property location',
-                hintname: '23 cross, Harbar Layout, Bangalor'),
+                name: 'Address Line 1',
+                hintname: '23 cross, Harbar Layout, Bangalore'),
+          ),
+          ScreenUtil().setVerticalSpacing(30),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 25.0),
+            child: TextformFieldWithName(
+                name: 'Address Line 2',
+                hintname: '23 cross, Harbar Layout, Bangalore'),
           ),
           ScreenUtil().setVerticalSpacing(30),
           Padding(

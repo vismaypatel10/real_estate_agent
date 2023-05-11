@@ -109,7 +109,7 @@ class _PhotoScreenState extends State<PhotoScreen> {
                             imageList[index],
                           ),
                           fit: BoxFit.cover),
-                      color: Colors.blueGrey,
+                      // color: Colors.blueGrey,
                       borderRadius: BorderRadius.circular(15)),
                 );
               },

@@ -5,6 +5,7 @@ import 'package:real_estate_agent/core/contants/app_assets.dart';
 import 'package:real_estate_agent/core/contants/sizes.dart';
 import 'package:real_estate_agent/core/utils/colors.dart';
 import 'package:real_estate_agent/models/property_list_model.dart';
+import 'package:real_estate_agent/views/screens/property_details.dart';
 
 class PropertyListScreen extends StatefulWidget {
   const PropertyListScreen({super.key});
@@ -124,84 +125,96 @@ class _PropertyListScreenState extends State<PropertyListScreen> {
                                 thickness: 1, indent: 20, endIndent: 20),
                             itemCount: listProperty[index].values.first.length,
                             itemBuilder: (context, i) {
-                              return Container(
-                                padding:
-                                    const EdgeInsets.only(left: 30, right: 20),
-                                width: MediaQuery.of(context).size.width,
-                                child: Row(children: [
-                                  ClipRRect(
-                                    borderRadius:
-                                        BorderRadius.circular(Sizes.s15.r),
-                                    child: SizedBox(
-                                      height: Sizes.s68.h,
-                                      width: Sizes.s68.w,
-                                      child: Image.asset(listProperty[index]
-                                          .values
-                                          .first[i]
-                                          .profileImage),
+                              return GestureDetector(
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const DetailApartmentScreen()));
+                                },
+                                child: Container(
+                                  padding: const EdgeInsets.only(
+                                      left: 30, right: 20),
+                                  width: MediaQuery.of(context).size.width,
+                                  child: Row(children: [
+                                    ClipRRect(
+                                      borderRadius:
+                                          BorderRadius.circular(Sizes.s15.r),
+                                      child: SizedBox(
+                                        height: Sizes.s68.h,
+                                        width: Sizes.s68.w,
+                                        child: Image.asset(listProperty[index]
+                                            .values
+                                            .first[i]
+                                            .profileImage),
+                                      ),
                                     ),
-                                  ),
-                                  ScreenUtil().setHorizontalSpacing(Sizes.s15),
-                                  Expanded(
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            Text(
-                                              listProperty[index]
-                                                  .values
-                                                  .first[i]
-                                                  .name,
-                                              style: TextStyle(
-                                                  fontSize: Sizes.s14.sp,
-                                                  fontWeight: FontWeight.w600),
-                                            ),
-                                            Text(
-                                              '12:00 PM',
-                                              style: TextStyle(
-                                                  fontSize: Sizes.s10.sp,
-                                                  fontWeight: FontWeight.w400),
-                                            ),
-                                          ],
-                                        ),
-                                        ScreenUtil().setVerticalSpacing(11),
-                                        Text(
-                                          listProperty[index]
-                                              .values
-                                              .first[i]
-                                              .address,
-                                          style: TextStyle(
-                                              fontSize: Sizes.s11.sp,
-                                              fontWeight: FontWeight.w400),
-                                        ),
-                                      ],
+                                    ScreenUtil()
+                                        .setHorizontalSpacing(Sizes.s15),
+                                    Expanded(
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              Text(
+                                                listProperty[index]
+                                                    .values
+                                                    .first[i]
+                                                    .name,
+                                                style: TextStyle(
+                                                    fontSize: Sizes.s14.sp,
+                                                    fontWeight:
+                                                        FontWeight.w600),
+                                              ),
+                                              Text(
+                                                '12:00 PM',
+                                                style: TextStyle(
+                                                    fontSize: Sizes.s10.sp,
+                                                    fontWeight:
+                                                        FontWeight.w400),
+                                              ),
+                                            ],
+                                          ),
+                                          ScreenUtil().setVerticalSpacing(11),
+                                          Text(
+                                            listProperty[index]
+                                                .values
+                                                .first[i]
+                                                .address,
+                                            style: TextStyle(
+                                                fontSize: Sizes.s11.sp,
+                                                fontWeight: FontWeight.w400),
+                                          ),
+                                        ],
+                                      ),
                                     ),
-                                  ),
-                                  // Column(
-                                  //   crossAxisAlignment:
-                                  //       CrossAxisAlignment.start,
-                                  //   children: [
-                                  // Text(
-                                  //   '12:00 PM',
-                                  //   style: TextStyle(
-                                  //       fontSize: Sizes.s10.sp,-
-                                  //       fontWeight: FontWeight.w400),
-                                  // ),
-                                  //     // ScreenUtil().setVerticalSpacing(11),
-                                  //     // Container(
-                                  //     //   height: Sizes.s7.h,
-                                  //     //   width: Sizes.s7.w,
-                                  //     //   decoration: BoxDecoration(
-                                  //     //       color: ThemeColors.orange,
-                                  //     //       shape: BoxShape.circle),
-                                  //     // )
-                                  //   ],
-                                  // )
-                                ]),
+                                    // Column(
+                                    //   crossAxisAlignment:
+                                    //       CrossAxisAlignment.start,
+                                    //   children: [
+                                    // Text(
+                                    //   '12:00 PM',
+                                    //   style: TextStyle(
+                                    //       fontSize: Sizes.s10.sp,-
+                                    //       fontWeight: FontWeight.w400),
+                                    // ),
+                                    //     // ScreenUtil().setVerticalSpacing(11),
+                                    //     // Container(
+                                    //     //   height: Sizes.s7.h,
+                                    //     //   width: Sizes.s7.w,
+                                    //     //   decoration: BoxDecoration(
+                                    //     //       color: ThemeColors.orange,
+                                    //     //       shape: BoxShape.circle),
+                                    //     // )
+                                    //   ],
+                                    // )
+                                  ]),
+                                ),
                               );
                             },
                           ),

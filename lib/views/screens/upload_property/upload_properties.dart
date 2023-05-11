@@ -63,16 +63,25 @@ class _UploadPropertyScreenState extends State<UploadPropertyScreen> {
                 Tab(
                   child: Text(
                     'Overview',
+                    style: TextStyle(
+                      fontFamily: 'Jost',
+                    ),
                   ),
                 ),
                 Tab(
                   child: Text(
                     'Location',
+                    style: TextStyle(
+                      fontFamily: 'Jost',
+                    ),
                   ),
                 ),
                 Tab(
                   child: Text(
                     'Photos',
+                    style: TextStyle(
+                      fontFamily: 'Jost',
+                    ),
                   ),
                 )
               ]),
